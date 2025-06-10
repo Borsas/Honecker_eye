@@ -1,0 +1,14 @@
+[Unit]
+Description=Honeckerin silmä
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+WorkingDirectory=/home/pi/Honecker_eye
+ExecStart=/home/pi/Honecker_eye/.venv/bin/python3 /home/pi/Honecker_eye/main.py
+[Install]
+WantedBy=multi-user.target
