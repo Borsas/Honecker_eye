@@ -24,7 +24,7 @@ async def send_picture(update: Update, context: CallbackContext):
 
 
 def get_image():
-    if not os.path.exists("/img"):
+    if not os.path.exists("img/"):
         os.mkdir("img")
     image_name = "img/"+ datetime.datetime.now().isoformat() + ".jpg"
     CMD = "fswebcam -d {device} -r 1280x720 --jpeg 85 --no-banner --skip 120 --set exposure_auto=1 ./{image}".format(image=image_name, device=DEVICE).split(" ")
