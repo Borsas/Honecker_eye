@@ -3,8 +3,7 @@ import datetime
 from telegram import Update, InputMediaPhoto
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, CallbackContext
 import subprocess
-from src.utils.env import DEVICE, CHANNEL_ID, GROUP_ID, SAVE_IMAGES, IMAGE_CHAT_ID, INFO_CHAT_ID
-
+from src.utils.env import DEVICE, CHANNEL_ID, GROUP_ID, IMAGE_CHAT_ID
 
 async def update_picture(context: CallbackContext):
     image_path = get_image()
